@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <%- include('style'); %>
+    </head>
+    <title>Order Details</title>
+</head>
+<body>
+    <div class="container">
+        <h2 class="title">Order Details</h2>
+        <form class="orderform" method="post" enctype="application/x-www-form-urlencoded" action="/order" >
+            <div class="field">
+                <label for="id"  class="label">Order id</label>
+                <input required  type="number" id="id" name="id" class="input">
+            </div>
+            <div class="field">
+                <label for="p_name"  class="label">Product Name</label>
+                <input  required type="text" id="p_name" name="p_name" class="input" >
+            </div>
+            <div class="field">
+                <label for="price"  class="label">Product Price</label>
+                <input required  type="number" id="price" name="price" class="input">
+            </div>
+            
+            <div class="field">
+                <button type="submit" class="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+<script>
+    if(window.history.replaceState){
+        window.history.replaceState(null,null,window.location.href);
+    }
+</script>
+</html>

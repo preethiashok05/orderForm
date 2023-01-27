@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <%- include('style'); %>
+    </head>
+    <title>User Details</title>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Payment</div>
+        <form class="userform" action="/payment" enctype="application/x-www-form-urlencoded" method="post">
+            <div class="field">
+                <label for="card_number" class="label">Card number</label>
+                <input type="text" name="card_number" class="input" >
+            </div>
+            <div class="field">
+                <label for="cnn" class="label">CNN</label>
+                <input type="number" name="cnn" class="input">
+            </div>
+            <div class="field">
+                <label for="amount" class="label">amount</label>
+                <input type="amount" name="amount" class="input" >
+            </div>
+        
+            <div class="field">
+                <button type="submit" class="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script>
+    if(window.history.replaceState){
+        window.history.replaceState(null,null,window.location.href);
+    }
+</script>
+</html>
